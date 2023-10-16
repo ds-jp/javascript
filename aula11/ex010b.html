@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brasileiro ou Estrangeiro?</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Você é Brasileiro ou Estrangeiro?</h1>
+  País: <input type="text" name="pais" id="ipais">
+  <input type="submit" value="Verificar" onclick="verificar()">
+  <div id="res"></div>
+
+  <script>
+    function verificar() {
+      var pais = document.querySelector('input#ipais');
+      var res = document.querySelector('div#res');
+      if (pais.value == 'Brasil') {
+        res.innerHTML = `<p>Brasileiro!</p>`;
+      } else {
+        res.innerHTML = `<p>Estrangeiro!</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
